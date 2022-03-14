@@ -11,10 +11,16 @@ class Circle{
     double getArea();
 };
 
+/*
 Circle::Circle(){
     radius = 1;
 }
+*/
 
+// delegating constructor(위임 생성)
+Circle::Circle() :Circle(1){} 
+
+// target constructor
 Circle::Circle(int r){
     radius = r;
 }

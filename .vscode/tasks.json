@@ -11,9 +11,9 @@
             "label": "save and compile for C++",
             "command": "g++",
             "args": [
-                "${file}",
+                "${fileDirname}/*.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.o"
             ],
             "group": "build",
             "problemMatcher": {
@@ -35,7 +35,7 @@
             "label": "save and compile for C",
             "command": "gcc",
             "args": [
-                "${file}",
+                "${fileDirname}/*.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
@@ -71,7 +71,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${fileDirname}\\**.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
